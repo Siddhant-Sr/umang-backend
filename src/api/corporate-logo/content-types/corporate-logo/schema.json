@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "corporate_logos",
+  "info": {
+    "singularName": "corporate-logo",
+    "pluralName": "corporate-logos",
+    "displayName": "corporate-logo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "organizationName": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "website": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

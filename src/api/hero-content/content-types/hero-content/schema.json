@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "hero_contents",
+  "info": {
+    "singularName": "hero-content",
+    "pluralName": "hero-contents",
+    "displayName": "Hero-Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainHeading": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "primaryButtonText": {
+      "type": "string"
+    },
+    "primaryButtonLink": {
+      "type": "text"
+    },
+    "secondaryButtonText": {
+      "type": "string"
+    },
+    "secondaryButtonLink": {
+      "type": "text"
+    },
+    "overlayOpacity": {
+      "type": "integer"
+    }
+  }
+}

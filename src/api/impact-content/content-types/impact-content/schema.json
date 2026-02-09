@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "impact_contents",
+  "info": {
+    "singularName": "impact-content",
+    "pluralName": "impact-contents",
+    "displayName": "Impact-content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "string"
+    },
+    "story1Title": {
+      "type": "string"
+    },
+    "story1Description": {
+      "type": "blocks"
+    },
+    "story1Icon": {
+      "type": "string"
+    },
+    "story1Stat": {
+      "type": "string"
+    },
+    "story2Title": {
+      "type": "string"
+    },
+    "story2Description": {
+      "type": "blocks"
+    },
+    "story2Icon": {
+      "type": "string"
+    },
+    "story2Stat": {
+      "type": "string"
+    },
+    "story3Title": {
+      "type": "string"
+    },
+    "story3Description": {
+      "type": "blocks"
+    },
+    "story3Icon": {
+      "type": "string"
+    },
+    "story3Stat": {
+      "type": "string"
+    }
+  }
+}

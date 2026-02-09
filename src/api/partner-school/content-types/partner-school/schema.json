@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partner_schools",
+  "info": {
+    "singularName": "partner-school",
+    "pluralName": "partner-schools",
+    "displayName": "partner-school"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "schoolName": {
+      "type": "string"
+    },
+    "principal": {
+      "type": "string"
+    },
+    "students": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "programs": {
+      "type": "string"
+    },
+    "renovationStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Completed"
+      ]
+    }
+  }
+}

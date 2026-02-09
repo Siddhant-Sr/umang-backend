@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "services_contents",
+  "info": {
+    "singularName": "services-content",
+    "pluralName": "services-contents",
+    "displayName": "services-content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "string"
+    },
+    "serviceTitle": {
+      "type": "string"
+    },
+    "service1Description": {
+      "type": "text"
+    },
+    "service1Icon": {
+      "type": "string"
+    },
+    "service2Title": {
+      "type": "string"
+    },
+    "service2Description": {
+      "type": "text"
+    },
+    "service2Icon": {
+      "type": "string"
+    },
+    "srvice3Title": {
+      "type": "string"
+    },
+    "service3Description": {
+      "type": "text"
+    },
+    "service3Icon": {
+      "type": "string"
+    },
+    "service4Title": {
+      "type": "string"
+    },
+    "service4Description": {
+      "type": "text"
+    },
+    "service4Icon": {
+      "type": "string"
+    }
+  }
+}
