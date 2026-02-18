@@ -661,15 +661,13 @@ export interface ApiMediaMedia extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    duration: Schema.Attribute.Integer;
-    featured: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::media.media'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['video']>;
+    type: Schema.Attribute.Enumeration<['youtube', 'newspaper']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
