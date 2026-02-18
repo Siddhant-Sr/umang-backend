@@ -870,6 +870,37 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiResourceManagerResourceManager
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'resource_managers';
+  info: {
+    displayName: 'resource-manager';
+    pluralName: 'resource-managers';
+    singularName: 'resource-manager';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    documents: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heading: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::resource-manager.resource-manager'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServicesContentServicesContent
   extends Struct.SingleTypeSchema {
   collectionName: 'services_contents';
@@ -1541,6 +1572,7 @@ declare module '@strapi/strapi' {
       'api::partner.partner': ApiPartnerPartner;
       'api::photo.photo': ApiPhotoPhoto;
       'api::project.project': ApiProjectProject;
+      'api::resource-manager.resource-manager': ApiResourceManagerResourceManager;
       'api::services-content.services-content': ApiServicesContentServicesContent;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
       'api::trustee.trustee': ApiTrusteeTrustee;
