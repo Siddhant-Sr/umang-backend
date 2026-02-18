@@ -17,7 +17,8 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "video"
+        "youtube",
+        "newspaper"
       ]
     },
     "url": {
@@ -33,17 +34,11 @@
         "audios"
       ]
     },
-    "duration": {
-      "type": "integer"
-    },
     "category": {
       "type": "string"
     },
     "uploadeddate": {
       "type": "date"
-    },
-    "featured": {
-      "type": "boolean"
     },
     "description": {
       "type": "blocks"
