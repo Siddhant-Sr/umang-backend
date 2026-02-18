@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resource_managers",
+  "info": {
+    "singularName": "resource-manager",
+    "pluralName": "resource-managers",
+    "displayName": "resource-manager"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "documents": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    }
+  }
+}
