@@ -884,7 +884,9 @@ export interface ApiResourceManagerResourceManager
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     documents: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    heading: Schema.Attribute.String;
+    heading: Schema.Attribute.Enumeration<
+      ['resource Center', 'Account', 'FCRA Annual', 'FCRA Quarterly']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

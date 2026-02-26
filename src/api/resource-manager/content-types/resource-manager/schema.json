@@ -25,7 +25,13 @@
       "type": "string"
     },
     "heading": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "resource Center",
+        "Account",
+        "FCRA Annual",
+        "FCRA Quarterly"
+      ]
     }
   }
 }
