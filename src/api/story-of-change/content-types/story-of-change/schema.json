@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "story_of_changes",
+  "info": {
+    "singularName": "story-of-change",
+    "pluralName": "story-of-changes",
+    "displayName": "story-of-change"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "contents": {
+      "type": "blocks"
+    }
+  }
+}
