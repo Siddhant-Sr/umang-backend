@@ -979,6 +979,37 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiStoryOfChangeStoryOfChange
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'story_of_changes';
+  info: {
+    displayName: 'story-of-change';
+    pluralName: 'story-of-changes';
+    singularName: 'story-of-change';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contents: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::story-of-change.story-of-change'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTrusteeTrustee extends Struct.CollectionTypeSchema {
   collectionName: 'trustees';
   info: {
@@ -1575,6 +1606,7 @@ declare module '@strapi/strapi' {
       'api::resource-manager.resource-manager': ApiResourceManagerResourceManager;
       'api::services-content.services-content': ApiServicesContentServicesContent;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
+      'api::story-of-change.story-of-change': ApiStoryOfChangeStoryOfChange;
       'api::trustee.trustee': ApiTrusteeTrustee;
       'api::youtube-link.youtube-link': ApiYoutubeLinkYoutubeLink;
       'plugin::content-releases.release': PluginContentReleasesRelease;
