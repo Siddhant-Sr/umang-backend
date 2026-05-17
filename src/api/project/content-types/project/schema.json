@@ -14,54 +14,7 @@
     "title": {
       "type": "string"
     },
-    "slug": {
-      "type": "string"
-    },
-    "description": {
-      "type": "blocks"
-    },
     "content": {
-      "type": "blocks"
-    },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "youtubeLinks": {
-      "type": "string"
-    },
-    "location": {
-      "type": "string"
-    },
-    "statuus": {
-      "type": "enumeration",
-      "default": "Ongoing",
-      "enum": [
-        "Ongoing"
-      ]
-    },
-    "startDate": {
-      "type": "date"
-    },
-    "endDate": {
-      "type": "date"
-    },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Education"
-      ]
-    },
-    "beneficiaries": {
-      "type": "integer"
-    },
-    "impact": {
       "type": "blocks"
     }
   }

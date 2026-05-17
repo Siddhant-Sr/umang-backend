@@ -23,15 +23,6 @@
         "videos",
         "audios"
       ]
-    },
-    "website": {
-      "type": "string"
-    },
-    "category": {
-      "type": "string"
-    },
-    "year": {
-      "type": "integer"
     }
   }
 }
