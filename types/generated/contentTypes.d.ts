@@ -489,6 +489,36 @@ export interface ApiBoardMemberBoardMember extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiContactUsContactUs extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_uses';
+  info: {
+    displayName: 'contact-us';
+    pluralName: 'contact-uses';
+    singularName: 'contact-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-us.contact-us'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCorporateLogoCorporateLogo
   extends Struct.CollectionTypeSchema {
   collectionName: 'corporate_logos';
@@ -708,12 +738,10 @@ export interface ApiPartnerSchoolPartnerSchool
     draftAndPublish: true;
   };
   attributes: {
-    contact: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    district: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -722,17 +750,13 @@ export interface ApiPartnerSchoolPartnerSchool
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
-    principal: Schema.Attribute.String;
     programs: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    renovationStatus: Schema.Attribute.Enumeration<['Completed']>;
     schoolName: Schema.Attribute.String;
-    state: Schema.Attribute.String;
-    students: Schema.Attribute.Integer;
+    type: Schema.Attribute.Enumeration<['school', 'college']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    website: Schema.Attribute.String;
   };
 }
 
@@ -1546,6 +1570,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-content.about-content': ApiAboutContentAboutContent;
       'api::board-member.board-member': ApiBoardMemberBoardMember;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::corporate-logo.corporate-logo': ApiCorporateLogoCorporateLogo;
       'api::hero-content.hero-content': ApiHeroContentHeroContent;
       'api::hero-image.hero-image': ApiHeroImageHeroImage;
