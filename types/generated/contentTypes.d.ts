@@ -441,14 +441,9 @@ export interface ApiAboutContentAboutContent extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    achievements: Schema.Attribute.Blocks;
-    activePrograms: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    foundedYear: Schema.Attribute.Integer;
-    historyDescription: Schema.Attribute.Blocks;
-    livesImpacted: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -457,14 +452,10 @@ export interface ApiAboutContentAboutContent extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     mainDescription: Schema.Attribute.Blocks;
     mainHeading: Schema.Attribute.String;
-    missionStatement: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    transparency: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    valuesStatement: Schema.Attribute.Blocks;
-    visionStatement: Schema.Attribute.String;
   };
 }
 
@@ -483,11 +474,7 @@ export interface ApiBoardMemberBoardMember extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    email: Schema.Attribute.Email;
-    experience: Schema.Attribute.Integer;
-    expertise: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    linkedin: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -495,11 +482,7 @@ export interface ApiBoardMemberBoardMember extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    order: Schema.Attribute.Integer;
-    phone: Schema.Attribute.String;
-    position: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    Statuus: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -518,7 +501,6 @@ export interface ApiCorporateLogoCorporateLogo
     draftAndPublish: true;
   };
   attributes: {
-    category: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -534,8 +516,6 @@ export interface ApiCorporateLogoCorporateLogo
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    website: Schema.Attribute.String;
-    year: Schema.Attribute.Integer;
   };
 }
 
@@ -587,7 +567,6 @@ export interface ApiHeroImageHeroImage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -595,7 +574,6 @@ export interface ApiHeroImageHeroImage extends Struct.CollectionTypeSchema {
       'api::hero-image.hero-image'
     > &
       Schema.Attribute.Private;
-    order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -660,7 +638,6 @@ export interface ApiMediaMedia extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::media.media'> &
       Schema.Attribute.Private;
@@ -774,7 +751,6 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    industry: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -787,8 +763,6 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    website: Schema.Attribute.String;
-    yearJoined: Schema.Attribute.BigInteger;
   };
 }
 
@@ -809,7 +783,6 @@ export interface ApiPhotoPhoto extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
-    description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::photo.photo'> &
@@ -835,36 +808,21 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    beneficiaries: Schema.Attribute.Integer;
-    category: Schema.Attribute.Enumeration<['Education']>;
     content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks;
-    endDate: Schema.Attribute.Date;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    impact: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::project.project'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.String;
-    startDate: Schema.Attribute.Date;
-    statuus: Schema.Attribute.Enumeration<['Ongoing']> &
-      Schema.Attribute.DefaultTo<'Ongoing'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    youtubeLinks: Schema.Attribute.String;
   };
 }
 
@@ -1025,9 +983,7 @@ export interface ApiTrusteeTrustee extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    email: Schema.Attribute.Email;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    linkedin: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1035,9 +991,6 @@ export interface ApiTrusteeTrustee extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    order: Schema.Attribute.Integer;
-    phone: Schema.Attribute.String;
-    position: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

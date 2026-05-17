@@ -23,12 +23,6 @@
         "videos",
         "audios"
       ]
-    },
-    "description": {
-      "type": "text"
-    },
-    "order": {
-      "type": "integer"
     }
   }
 }

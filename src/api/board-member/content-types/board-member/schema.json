@@ -14,9 +14,6 @@
     "name": {
       "type": "string"
     },
-    "position": {
-      "type": "string"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -29,27 +26,6 @@
     },
     "description": {
       "type": "blocks"
-    },
-    "email": {
-      "type": "email"
-    },
-    "phone": {
-      "type": "string"
-    },
-    "linkedin": {
-      "type": "string"
-    },
-    "experience": {
-      "type": "integer"
-    },
-    "expertise": {
-      "type": "string"
-    },
-    "order": {
-      "type": "integer"
-    },
-    "Statuus": {
-      "type": "string"
     }
   }
 }

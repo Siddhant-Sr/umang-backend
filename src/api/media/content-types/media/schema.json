@@ -39,9 +39,6 @@
     },
     "uploadeddate": {
       "type": "date"
-    },
-    "description": {
-      "type": "blocks"
     }
   }
 }

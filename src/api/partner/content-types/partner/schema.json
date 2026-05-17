@@ -26,15 +26,6 @@
     },
     "description": {
       "type": "blocks"
-    },
-    "website": {
-      "type": "string"
-    },
-    "industry": {
-      "type": "string"
-    },
-    "yearJoined": {
-      "type": "biginteger"
     }
   }
 }

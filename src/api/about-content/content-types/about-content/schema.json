@@ -16,33 +16,6 @@
     },
     "mainDescription": {
       "type": "blocks"
-    },
-    "missionStatement": {
-      "type": "string"
-    },
-    "visionStatement": {
-      "type": "string"
-    },
-    "valuesStatement": {
-      "type": "blocks"
-    },
-    "foundedYear": {
-      "type": "integer"
-    },
-    "livesImpacted": {
-      "type": "integer"
-    },
-    "activePrograms": {
-      "type": "integer"
-    },
-    "transparency": {
-      "type": "string"
-    },
-    "historyDescription": {
-      "type": "blocks"
-    },
-    "achievements": {
-      "type": "blocks"
     }
   }
 }
