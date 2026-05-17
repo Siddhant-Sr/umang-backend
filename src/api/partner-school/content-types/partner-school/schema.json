@@ -14,19 +14,7 @@
     "schoolName": {
       "type": "string"
     },
-    "principal": {
-      "type": "string"
-    },
-    "students": {
-      "type": "integer"
-    },
     "location": {
-      "type": "string"
-    },
-    "state": {
-      "type": "string"
-    },
-    "district": {
       "type": "string"
     },
     "image": {
@@ -42,19 +30,14 @@
     "description": {
       "type": "blocks"
     },
-    "contact": {
-      "type": "string"
-    },
-    "website": {
-      "type": "string"
-    },
     "programs": {
       "type": "string"
     },
-    "renovationStatus": {
+    "type": {
       "type": "enumeration",
       "enum": [
-        "Completed"
+        "school",
+        "college"
       ]
     }
   }
